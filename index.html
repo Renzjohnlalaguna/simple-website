@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4a6fa5;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #4a6fa5;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background: #3a5a8f;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>A simple, clean design</p>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <img src="https://placehold.co/600x400" alt="Office workspace with laptops and notebooks on a table" class="responsive-img">
+            <p>We are a small company dedicated to providing excellent services to our clients. Our team is passionate about delivering high-quality solutions.</p>
+            <a href="#" class="btn">Learn More</a>
+        </section>
+        
+        <section>
+            <h2>Our Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                <div style="background: #f4f4f4; padding: 1rem; border-radius: 5px;">
+                    <h3>Web Design</h3>
+                    <p>Custom websites tailored to your business needs.</p>
+                </div>
+                <div style="background: #f4f4f4; padding: 1rem; border-radius: 5px;">
+                    <h3>SEO</h3>
+                    <p>Improve your search engine rankings and visibility.</p>
+                </div>
+                <div style="background: #f4f4f4; padding: 1rem; border-radius: 5px;">
+                    <h3>Consulting</h3>
+                    <p>Expert advice for your digital strategy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Simple Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple script to show an alert when clicking a nav link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('This is a demo. In a real site, this would navigate to: ' + this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
